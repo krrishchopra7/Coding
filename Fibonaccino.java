@@ -2,18 +2,19 @@ package loops;
 
 import java.util.Scanner;
 
-public class Reverse {
+public class Fibonaccino {
     @SuppressWarnings("resource")
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
+        int a=0;
+        int b=1;
         int n = in.nextInt();
-        int ans=0;
-        while(n>0){
-            int rem=n%10;
-            n=n/10;
-            ans=ans*10 +rem;
+        for(int i=0;i<=n;i++){
+            int f=a;
+            a=a+b;
+            b=f;
+            System.out.println(f);
         }
-        System.out.println(ans);
     }
     
 }
