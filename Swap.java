@@ -1,17 +1,25 @@
-package arrays;
+package functions;
 
-import java.util.Arrays;
+import java.util.Scanner;
 
 public class Swap {
     public static void main(String[] args) {
-        int arr[]= {1,3,9,18};
-        swap(arr,1,2);
-        System.out.println(Arrays.toString(arr));
+        Scanner in = new Scanner(System.in);
+        int a = in.nextInt();
+        int b = in.nextInt();
+        swap(a,b);
+        System.out.println("After Swapping");
+        System.out.println(b);
+        System.out.println(a);
+        in.close();
+
     }
-    static void swap(int arr[],int index1,int index2){
-        int temp = arr[index1];
-        arr[index1]=arr[index2];
-        arr[index2]=temp;
+    static void swap(int a,int b){
+       int temp;
+       temp=a;
+       a=b;
+       b=temp;
+        
     }
     
 }
